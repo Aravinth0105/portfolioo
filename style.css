@@ -1,0 +1,270 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(bg.jpg);
+    background-size: 100%;
+}
+.sun{
+    height: 70px;
+    width: 70px;
+    background-image: url(sunn-removebg-preview.png);
+    position: absolute;
+    background-size: cover;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+}
+.one{
+    height: 7px;
+    width: 7px;
+    background: whitesmoke;
+    border-radius: 50%;
+    position: absolute;
+    left: 45%;
+    top: 45%;
+    transform: translate(-50%,-50%);
+    animation:rot1 linear 5s infinite;
+}
+@keyframes rot1{
+    from{transform: rotate(0deg)translateY(50px) rotate(0deg);}
+    to{transform: rotate(360deg)translateY(50px) rotate(-360deg);}
+}
+.fir-outline{
+  border-radius: 50%;  
+  border: 1px solid whitesmoke;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  height: 100px;
+  width: 100px;
+}
+/*for two*/
+.two{
+    height: 8px;
+    width: 8px;
+    background: rgb(242, 134, 51);
+    border-radius: 50%;
+    position: absolute;
+    left: 46.5%;
+    top: 46%;
+    transform: translate(-50%,-50%);
+    animation:rot2 linear 10s infinite;
+}
+@keyframes rot2{
+    from{transform: rotate(0deg)translateY(60px) rotate(0deg);}
+    to{transform: rotate(360deg)translateY(60px) rotate(-360deg);}
+}
+.two-outline{
+  border-radius: 50%;  
+  border: 1px solid whitesmoke;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  height: 120px;
+  width: 120px;
+}
+/*for thr*/
+.thr{
+    height: 12px;
+    width: 12px;
+    background: rgb(81, 145, 234);
+    border-radius: 50%;
+    position: absolute;
+    left: 45%;
+    top: 45%;
+    transform: translate(-50%,-50%);
+    animation:rot3 linear 12s infinite;
+}
+@keyframes rot3{
+    from{transform: rotate(0deg)translateY(80px) rotate(0deg);}
+    to{transform: rotate(360deg)translateY(80px) rotate(-360deg);}
+}
+.thr-outline{
+  border-radius: 50%;  
+  border: 1px solid whitesmoke;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  height: 160px;
+  width: 160px;
+}
+.son{
+    height:15px;
+    width: 15px;
+    border: 1px dotted lightskyblue;
+    position: relative;
+    border-radius: 50px;
+    left: -2px;
+    top: -2px;
+}
+.son-outline{
+    height: 5px;
+    width: 5px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 45%;
+    top: 45%;
+    animation:son1 linear 2s infinite;
+}
+@keyframes son1{
+    from{transform: rotate(0deg)translateY(10px) rotate(0deg);}
+    to{transform: rotate(360deg)translateY(10px) rotate(-360deg);}
+}
+
+
+/*for for*/
+.for{
+    height: 12px;
+    width: 12px;
+    background: rgb(227, 180, 143);
+    border-radius: 50%;
+    position: absolute;
+    left: 46%;
+    top: 45.5%;
+    transform: translate(-50%,-50%);
+    animation:rot4 linear 25s infinite;
+}
+@keyframes rot4{
+    from{transform: rotate(0deg)translateY(100px) rotate(0deg);}
+    to{transform: rotate(360deg)translateY(100px) rotate(-360deg);}
+}
+.for-outline{
+  border-radius: 50%;  
+  border: 1px solid whitesmoke;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  height: 200px;
+  width: 200px;
+}
+/*for fiv*/
+.fiv{
+    height: 20px;
+    width: 20px;
+    background-image: url(six-removebg-preview.png);
+    background-size: cover;
+    border-radius: 50%;
+    position: absolute;
+    left: 47%;
+    top: 46.5%;
+    transform: translate(-50%,-50%);
+    animation:rot5 linear 500s infinite;
+}
+@keyframes rot5{
+    from{transform: rotate(0deg)translateY(140px) rotate(0deg);}
+    to{transform: rotate(360deg)translateY(140px) rotate(-360deg);}
+}
+.fiv-outline{
+  border-radius: 50%;  
+  border: 1px solid whitesmoke;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  height: 280px;
+  width: 280px;
+}
+/*for six*/
+.six{
+    height: 30px;
+    width: 30px;
+    background: lemonchiffon;
+    background-size: cover;
+    border-radius: 50%;
+    position: absolute;
+    left: 47%;
+    top: 48%;
+    transform: translate(-50%,-50%);
+    animation:rot6 linear 500s infinite;
+   
+}
+@keyframes rot6{
+    from{transform: rotate(0deg)translateX(210px) rotate(0deg);}
+    to{transform: rotate(360deg)translateX(210px) rotate(-360deg);}
+}
+.six-outline{
+  border-radius: 50%;  
+  border: 1px solid whitesmoke;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  height: 420px;
+  width: 420px;
+}
+.bor{
+    height:42px;
+    width: 42px;
+    border: 5px solid rgb(164, 165, 137);
+    position: relative;
+    border-radius: 50px;
+    left: -11px;
+    top: -11px;
+}
+/*for sev*/
+.sev{
+    height: 13px;
+    width: 13px;
+    background: rgb(129, 128, 128);
+    border-radius: 50%;
+    position: absolute;
+    left: 48.75%;
+    top: 48.5%;
+    transform: translate(-50%,-50%);
+    animation:rot7 linear 1500s infinite;
+}
+@keyframes rot7{
+    from{transform: rotate(0deg)translateY(260px) rotate(0deg);}
+    to{transform: rotate(360deg)translateY(260px) rotate(-360deg);}
+}
+.sev-outline{
+  border-radius: 50%;  
+  border: 1px solid whitesmoke;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  height: 520px;
+  width: 520px;
+}
+
+.eig{
+    height: 11px;
+    width: 11px;
+    background: rgb(82, 161, 239);
+    border-radius: 50%;
+    position: absolute;
+    left: 49%;
+    top: 48.5%;
+    transform: translate(-50%,-50%);
+    animation:rot8 linear 2000s infinite;
+}
+@keyframes rot8{
+    from{transform: rotate(0deg)translateX(290px) rotate(0deg);}
+    to{transform: rotate(360deg)translateX(290px) rotate(-360deg);}
+}
+.eig-outline{
+  border-radius: 50%;  
+  border: 1px solid whitesmoke;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  height: 580px;
+  width: 580px;
+}

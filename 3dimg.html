@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            width: 100%;
+            background: #000;
+        }
+      
+        .box{
+            position: relative;
+            width: 300px;
+            height: 300px;
+            transform-style:  preserve-3d;
+            animation: anime 20s linear infinite;
+        }
+        @keyframes anime
+        {
+            0%{
+                transform: perspective(1000px) rotateX(45deg) rotateY(35deg);
+            }
+            100%{
+                transform: perspective(1000px) rotateX(360deg) rotateY(35deg);
+            }
+        }
+        .box span{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform-origin:right 0px;
+            transform-style: preserve-3d;
+            transform: rotateX(calc(var(--i) * 24deg)) translateX(200px);
+        }
+        .box span  img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <section>
+    <div class="box">
+        <span style="--i:1;"><img src="https://m.media-amazon.com/images/I/81mYVGlpicL._AC_UF1000,1000_QL80_.jpg" alt="" width="300px" height="300px"></span>
+        <span style="--i:2;"><img src="https://qph.cf2.quoracdn.net/main-qimg-14c0b797210931284f7db349f76976cc-pjlq" alt="" width="300px" height="300px"></span>
+        <span style="--i:3;"><img src="https://qph.cf2.quoracdn.net/main-qimg-8ee6e5927ef92cca64e1f19f1b501fb6-pjlq" alt=""width="300px" height="300px"></span>
+        <span style="--i:4;"><img src="https://img.spoilerhat.com/img/?url=https://zjcdn.mangafox.me/store/manga/14356/TBD-285.0/compressed/q004.jpg" alt="" width="300px" height="300px"></span>
+        <span style="--i:5;"><img src="https://i.pinimg.com/736x/29/e3/46/29e346a7ccaecc14ceb2f6c6ded5dee2.jpg" alt="" width="300px" height="300px" ></span>
+        <span style="--i:6;"><img src="https://i.pinimg.com/736x/29/e3/46/29e346a7ccaecc14ceb2f6c6ded5dee2.jpg" alt="" width="300px" height="300px"></span>
+        <span style="--i:7;"><img src="https://i.pinimg.com/736x/29/e3/46/29e346a7ccaecc14ceb2f6c6ded5dee2.jpg" alt="" width="300px" height="300px" ></span>
+        <span style="--i:8;"><img src="https://m.media-amazon.com/images/I/81mYVGlpicL._AC_UF1000,1000_QL80_.jpg" alt="" width="300px" height="300px"></span>
+    </div>
+</section>
+    <p style="color: rgb(148, 21, 21);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus itaque modi quod vel laboriosam minima quaerat officiis iste, earum consectetur ipsam, reiciendis laborum odio consequatur commodi velit similique id iusto. Asperiores, impedit nesciunt. Nemo veniam quis fugiat temporibus laboriosam inventore ab tenetur vero! Animi, cum itaque? Corporis impedit culpa error, dignissimos cumque iusto ab nisi inventore sunt, beatae obcaecati! Explicabo, ipsam quae pariatur praesentium perspiciatis voluptatem quidem doloribus exercitationem ipsum fugit fuga sed ad quisquam dolorem officiis aliquam nam nesciunt impedit recusandae mollitia iusto. Quos ducimus quo optio, ut nisi consectetur, nulla iure nostrum mollitia asperiores dicta a corporis non?</p>
+
+</body>
+</html>
+

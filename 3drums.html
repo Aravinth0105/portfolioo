@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: rgb(47, 57, 86);
+        }
+        h1 {
+            font-size: 5rem;
+            color: white;
+        }
+        .drum {
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            margin: 10px;
+            text-align: center;
+            outline: none;
+            border: 10px solid rebeccapurple;
+            font-size: 5rem;
+            font-weight: 900;
+            color: red;
+        }
+        .w {
+            background-image: url(cra.webp);
+            background-size: cover;
+        }
+        .a {
+            background-image: url(drum1.jpg);
+            background-size: cover;
+        }
+        .s {
+            background-image: url(drum.jpg);
+            background-size: cover;
+        }
+        .d {
+            background-image: url(drum1.jpg);
+            background-size: cover;
+        }
+        .j {
+            background-image: url(drum.jpg);
+            background-size: cover;
+        }
+        .k {
+            background-image: url(drum1.jpg);
+            background-size: cover;
+        }
+        .l {
+            background-image: url(drum.jpg);
+            background-size: cover;
+        }
+        .pressed {
+            /* Define the styles for the pressed state here */
+            border-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">Drum kit</h1>
+    <div class="set">
+        <button class="w drum">w</button>
+        <button class="a drum">a</button>
+        <button class="s drum">s</button>
+        <button class="d drum">d</button>
+        <button class="j drum">j</button>
+        <button class="k drum">k</button>
+        <button class="l drum">l</button>
+    </div>
+    <script>
+        var drumButtons = document.querySelectorAll(".drum");
+
+        for (var i = 0; i < drumButtons.length; i++) {
+            drumButtons[i].addEventListener("click", function () {
+                var btnInnerHTML = this.innerHTML;
+                makeSound(btnInnerHTML);
+                buttonAnimation(btnInnerHTML);
+            });
+        }
+
+        document.addEventListener("keypress", function (event) {
+            makeSound(event.key);
+            buttonAnimation(event.key);
+        });
+
+        function makeSound(key) {
+            switch (key) {
+                case "w":
+                    var tom1 = new Audio("1.mp3");
+                    tom1.play();
+                    break;
+                case "a":
+                    var tom2 = new Audio("3.mp3");
+                    tom2.play();
+                    break;
+                case "s":
+                    var tom3 = new Audio("1.mp3");
+                    tom3.play();
+                    break;
+                case "d":
+                    var tom4 = new Audio("3.mp3");
+                    tom4.play();
+                    break;
+                case "j":
+                    var tom5 = new Audio("1.mp3");
+                    tom5.play();
+                    break;
+                case "k":
+                    var tom6 = new Audio("3.mp3");
+                    tom6.play();
+                    break;
+                case "l":
+                    var tom7 = new Audio("3.mp3");
+                    tom7.play();
+                    break;
+                default:
+                    console.log(key);
+            }
+        }
+
+        function buttonAnimation(currentKey) {
+            var activeButton = document.querySelector("." + currentKey);
+            activeButton.classList.add("pressed");
+
+            setTimeout(function () {
+                activeButton.classList.remove("pressed");
+            }, 100);
+        }
+    </script>
+</body>
+</html>

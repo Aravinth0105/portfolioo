@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Equal Columns</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        
+
+        
+        .containerroll {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .column1 {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+        .boxroll{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+          
+            background: black;
+        }
+      
+        .column1{
+            z-index: 1;
+            position: relative;
+            width: 300px;
+            height: 300px;
+            transform-style:  preserve-3d;
+            animation: anime 20s linear infinite;
+        }
+        @keyframes anime
+        {
+            0%{
+                transform: perspective(2000px) rotateX(0deg) rotateY(35deg);
+            }
+            100%{
+                transform: perspective(2000px) rotateX(360deg) rotateY(35deg);
+            }
+        }
+        .column1 span{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 70%;
+            height: 100%;
+            transform-origin: center;
+            transform-style:  preserve-3d;
+            transform: rotateX(calc(var(--i) * 45deg)) translateZ(370px);
+        }
+        .column1 span  img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .column2 {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+            z-index: 2;
+        }
+
+        /* .column1 img {
+            max-width: 100%;
+            height: auto;
+        } */
+
+        @media (max-width: 768px) {
+            .column1 {
+                flex: 100%;
+            }
+        }
+        @media (max-width: 768px) {
+            .column2 {
+                flex: 100%;
+            }
+        }
+
+
+
+
+        .pop{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #000;
+        }
+        h2{
+            position: relative;
+            margin: 0;
+            font-size: 4em;
+            font-weight: 900;
+            color: #fff;
+            
+            z-index: 1;
+            overflow: hidden;
+        }
+        h2 span{
+            color: red;
+        }
+        h2:before
+        {
+            content: ' ';
+            position: absolute;
+            left: 110%;
+            width: 120%;
+            height: 100%;
+            background: linear-gradient(90deg,transparent 0%, #000 5%, #000 100%
+            );
+            animation: animate 5.5s linear forwards infinite;
+        }
+        @keyframes animate
+        {
+            0%
+            {
+                left:110%
+            }
+           100%
+            {
+                left:-20%
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="boxroll">
+    <div class="containerroll">
+        <div class="column1">
+            <span style="--i:1;"><img src="https://i.pinimg.com/736x/29/e3/46/29e346a7ccaecc14ceb2f6c6ded5dee2.jpg" alt="" width="300px" height="300px"></span>
+        <span style="--i:2;"><img src="https://i.pinimg.com/1200x/f9/20/0f/f9200f0b1f84284d99d40bd6d6eca1e6.jpg" alt="" width="300px" height="300px"></span>
+        <span style="--i:3;"><img src="https://i.redd.it/oklyrh6ccdn31.jpg" alt=""width="300px" height="300px"></span>
+        <span style="--i:4;"><img src="https://img.spoilerhat.com/img/?url=https://zjcdn.mangafox.me/store/manga/14356/TBD-295.0/compressed/d000.jpg" alt="" width="300px" height="300px"></span>
+        <span style="--i:5;"><img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/poster/q/4/x/medium-anime-poster-frame-dabi-my-hero-academia-manga-panel-original-imagnv5mb9gvmqpg.jpeg?q=20" alt="" width="300px" height="300px" ></span>
+        <span style="--i:6;"><img src="https://i.pinimg.com/1200x/22/2e/29/222e295f3436ae7bf41c2f3e12087b8b.jpg" alt="" width="300px" height="300px"></span>
+        <span style="--i:7;"><img src="https://i.pinimg.com/474x/3d/3b/73/3d3b734655b7fffd25401ef015b65709.jpg" alt="" width="300px" height="300px" ></span>
+        <span style="--i:8;"><img src="https://i.pinimg.com/1200x/22/2e/29/222e295f3436ae7bf41c2f3e12087b8b.jpg" alt="" width="300px" height="300px"></span>
+        </div>
+        <div class="pop">
+            <h2><span>M</span>y <span>H</span>ero <span>A</span>cadamia</h2>
+        </div>
+   
+    </div>
+</div>
+    
+
+</body>
+</html>
